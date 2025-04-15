@@ -298,18 +298,24 @@ h2 {
 /* Footer Styles */
 .footer {
     background-color: blanchedalmond;
-    padding: 50px 0 20px;
+    padding: 50px 20px; /* Adjust padding for better responsiveness */
     color: #333;
     margin-top: 50px;
+    width: 100%; /* Ensure footer takes full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px; /* Add padding for spacing */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+}
+
+.footer-section {
+    padding: 0 10px; /* Adjust padding for smaller screens */
 }
 
 .footer-section h3 {
@@ -349,8 +355,8 @@ h2 {
 }
 
 .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center the footer bottom */
     text-align: center;
     padding-top: 20px;
     margin-top: 30px;
@@ -555,5 +561,14 @@ video {
     .video-container {
         width: 100%; /* Ensure video container is full width */
         max-width: none; /* Remove max-width to prevent overflow */
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack sections on smaller screens */
+        padding: 0 10px; /* Adjust padding for mobile */
+    }
+
+    .footer-section {
+        padding: 0 10px; /* Adjust padding for smaller screens */
     }
 }
